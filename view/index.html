@@ -29,12 +29,30 @@ html, body {
 #storymap-embed {
     /*border: 1px solid #999;*/
 }
+#back-button {
+    position: fixed;
+    bottom: 30px;
+    left: 10px;
+    padding: 5px 10px;
+    background-color: white;
+    color: #737373;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#back-button:hover {
+    background-color: #c34528;
+    color: white;
+}
 </style>
 <!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
 <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
 <div id="storymap-embed"></div>
+<button id="back-button" onclick="window.location.href='/'">返回主界面</button>
 
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M95DDQGLWH"></script>
