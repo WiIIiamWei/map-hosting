@@ -6,7 +6,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@knightlab" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="NJUPT Study" />
+<meta property="og:title" content="校园生活" />
 <meta property="og:description" content="">
 <meta property="og:url" content="https://uploads.knightlab.com/storymapjs/8dd20b26c7ce6ae67a35603675017061/njupt-study/index.html" />
 <meta property="og:image" content="https:///staticimg/logos/logo_storymap.png" />
@@ -29,30 +29,12 @@ html, body {
 #storymap-embed {
     /*border: 1px solid #999;*/
 }
-#back-button {
-    position: fixed;
-    bottom: 30px;
-    left: 10px;
-    padding: 5px 10px;
-    background-color: white;
-    color: #737373;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-}
-#back-button:hover {
-    background-color: #c34528;
-    color: white;
-}
 </style>
 <!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
 <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
 <div id="storymap-embed"></div>
-<button id="back-button" onclick="window.location.href='/'">返回主界面</button>
 
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M95DDQGLWH"></script>
@@ -76,9 +58,9 @@ html, body {
     var storymap_url = '//uploads.knightlab.com/storymapjs/8dd20b26c7ce6ae67a35603675017061/njupt-study/published.json';
     const urlParams = new URLSearchParams(window.location.search);
 
-    function onStoryMapTitle(e) {
+	function onStoryMapTitle(e) {
       document.title = "StoryMapJS: " + e.title;
-    };
+	};
 
     function getScriptPath(scriptname) {
         var scriptTags = document.getElementsByTagName('script');
@@ -135,7 +117,7 @@ html, body {
             font = urlJoin(options.script_path, font);
         }
         KLStoryMap.loadCSS(font,function(){ console.log('font loaded: ' + font);});
-        storymap = new KLStoryMap.StoryMap('storymap-embed', data, options, {
+	    storymap = new KLStoryMap.StoryMap('storymap-embed', data, options, {
             title: onStoryMapTitle
         });
         var mapType = storymap.options.map_type;
